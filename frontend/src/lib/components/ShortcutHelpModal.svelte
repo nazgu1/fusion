@@ -16,6 +16,10 @@
 			keys: 'Shift+M',
 			desc: `${t('item.mark_as_read')} (${t('common.current_page')})`
 		},
+		reloadAll: {
+			keys: 'Control+R,F5',
+			desc: `${t('common.reload')}`
+		},
 		toggleBookmark: { keys: 'b', desc: t('shortcuts.toggle_bookmark') },
 		viewOriginal: { keys: 'v', desc: t('shortcuts.view_original') },
 		nextFeed: { keys: 'Shift+J', desc: t('shortcuts.next_feed') },

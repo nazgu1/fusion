@@ -22,6 +22,7 @@
 	let { data, highlightUnread }: Props = $props();
 
 	let loading = $state(false);
+	let refreshing = $state(false);
 	// make items reactive so we can display the updates without reloading the page
 	let items = $state<Item[]>([]);
 	let total = $state(0);
@@ -97,7 +98,9 @@
 </script>
 
 <div>
-	{#if loading}
+	{#if refreshing}
+		<span class="loading loading-ring loading-xl"></span>
+	{:else if loading}
 		<div class="flex flex-col gap-1">
 			<div class="skeleton h-10 w-full rounded"></div>
 			<div class="skeleton h-10 w-full rounded"></div>

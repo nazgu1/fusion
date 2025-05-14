@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ItemActionMarkAllasRead from '$lib/components/ItemActionMarkAllasRead.svelte';
+	import ItemActionReload from '$lib/components/ItemActionReload.svelte';
 	import ItemList from '$lib/components/ItemList.svelte';
 	import PageNavHeader from '$lib/components/PageNavHeader.svelte';
 	import { t } from '$lib/i18n/index.js';
@@ -18,11 +19,13 @@
 		{:then items}
 			<ItemActionMarkAllasRead items={items.items} />
 		{/await}
+		<ItemActionReload />
 	</PageNavHeader>
 	<div class="px-4 lg:px-8">
 		<div class="py-6">
 			<h1 class="text-3xl font-bold">{t('common.unread')}</h1>
 		</div>
+
 		<ItemList data={data.items} highlightUnread={true} />
 	</div>
 </div>

@@ -14,6 +14,7 @@ const lang = {
 
 	// common words
 	'common.unread': 'Unread',
+	'common.reload': 'Reload',
 	'common.bookmark': 'Bookmark',
 	'common.all': 'All',
 	'common.feeds': 'Feeds',

@@ -20,7 +20,6 @@
 		{#await data.items then items}
 			<ItemActionMarkAllasRead items={items.items} />
 		{/await}
-		<FeedActionRefresh {feed} />
 		<ActionMenu {feed} />
 	</PageNavHeader>
 
